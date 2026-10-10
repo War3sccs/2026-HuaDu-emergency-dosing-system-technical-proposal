@@ -1,0 +1,113 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
+
+%文档设置及格式
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
+\include{document_setting}
+
+% 设置文件属性内容
+\hypersetup{pdfauthor={吴毓明},
+            pdftitle={次氯酸钠加药装置操作说明},
+            pdfsubject={使用说明},
+            pdfkeywords={任何问题，联系61508712@qq.com}}
+
+% 定义页眉页脚
+\include{foot_head}
+
+% 表格格式定义
+\include{table_format}
+
+% 图片
+\include{picture_configuration}
+
+% 特殊符号(例如千分号等)
+\usepackage{textcomp}
+
+% 流程图
+\include{flow_chart_preamble}
+
+% 开始正文
+\begin{document}
+
+% 制作封面
+\include{title}
+
+\tableofcontents % 目录
+
+\newpage % 换页
+
+%\part{系统组成}
+%ctex的\chapter{sdsg}是不能用的
+
+\section{系统组成及功能说明}
+\input{operation-instruction-system-construction-components.tex}
+
+\section{设备启动前准备}\label{sec:sg1}
+    \subsection{紧固件检查}
+    系统启动前，要先对所有的紧固件进行检查。紧固件包括底座固定螺栓、泵固定螺栓、马达连接螺栓以及所有的法兰连接螺栓等。如有松动情况，请将其上紧，如有脱落等情况，请按相应的规格补充相关的螺栓。
+
+    \subsection{管道连接检查}
+    检查管道中所有活接接头连接，如有松脱情况需要重新上紧。
+
+    \subsection{检查系统中各阀门状态}
+        %\subsubsection{检修排液阀应处于关闭状态}\label{sec:sg2}
+        %\input{operation-instruction-drain-valve}
+        
+
+        \subsubsection{反冲洗控制阀应处于关闭状态}\label{sec:sg1-1}
+        \input{operation-instruction-flush-valve.tex}
+        
+
+        \subsubsection{其余阀门均处于开启状态}
+        除检修排液阀、反冲洗控制阀之外的所有阀门，都应处于开启状态。
+
+\section{维护及检修}
+%建议联系加药系统经销商及售后服务人员，
+%由专业人士进行维护及检修，
+%如自行进行维护及检修，
+%有可能导致加药系统损坏。
+\par维护及检修之前，
+请先阅读下文，
+以及计量泵的操作说明书。
+下文内容为加药装置维护及检修操作顺序。
+
+    \subsection{关闭检修工位的供药阀}\label{sec:sg2}
+    \input{operation-instruction-supply-valve.tex}
+    
+    \subsection{关闭检修工位的加药阀}\label{sec:sg3}
+    \input{operation-instruction-dosing-valve.tex}
+
+\newpage
+
+    %\subsection{打开相应工位的检修排液阀}
+    %\large{\textbf{
+    %进行所有维护操作之前，
+    %请先打开相应工位的检修排液阀，
+    %释放系统内的压力！
+    %否则，拆卸相关零部件时，
+    %管道内的液体可能会喷射而出，
+    %影响维修人员的安全！
+    %}}
+
+    \subsection{反冲洗检修工位}
+    \input{operation-instruction-flushing.tex}
+
+    \subsection{检修设备}
+    待检修工位管道内残留化学品排净后，
+    可对计量泵、阻尼器、隔膜压力表、背压阀、泄压阀、Y型过液器等设备或元件进行检修操作。
+    各设备或元件的检修方法，
+    请参阅各设备或元件的使用说明，
+    或咨询加药系统经销商或售后服务人员。
+
+    \subsection{系统恢复运行}
+    设备检修完成后，
+    请参阅第\ref{sec:sg1}章内容于第\pageref{sec:sg1}页，
+    做好设备启动前准备，
+    使系统处于待命状态，
+    随时恢复正常运行。
+
+\section{反冲洗投加管道}
+    \input{operation-instruction-flushing-dosing-piping.tex}
+
+\end{document}

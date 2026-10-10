@@ -1,0 +1,39 @@
+
+\begin{figure}[h]
+\centering
+
+    \begin{tikzpicture}
+        %图片
+        \node at (0,3) {\includegraphics[height=10cm]{g02.PNG}};
+        \node at (0,-4) {\includegraphics[height=5cm]{g04.PNG}};
+
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {0.6,-3.7};
+        \node at (5,-2) (\itemNumber) [text_box] {泵1反冲洗进水阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.4)[red];
+        \def \itemNumber {2};
+        \def \centertPoint {-0.9,0.4};
+        \node at (-5,2) (\itemNumber) [text_box] {泵1反冲洗出水阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.4)[red];
+        \def \itemNumber {3};
+        \def \centertPoint {-0.6,-3.7};
+        \node at (-5,-2) (\itemNumber) [text_box] {泵2反冲洗进水阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.4)[red];
+        \def \itemNumber {4};
+        \def \centertPoint {0.9,0.4};
+        \node at (5,2) (\itemNumber) [text_box] {泵2反冲洗出水阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.4)[red];
+
+        % 辅助线
+        \def \xLimit {8};
+        \def \yLimit {8};
+        %\input{auxiliary_line}
+
+    \end{tikzpicture}
+\caption{反冲洗控制阀门位置}\label{fig:g02g03}
+\end{figure}

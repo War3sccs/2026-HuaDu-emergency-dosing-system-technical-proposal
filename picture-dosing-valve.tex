@@ -1,0 +1,28 @@
+
+\begin{figure}[h]
+\centering
+
+    \begin{tikzpicture}
+        %图片
+        \node at (0,0) {\includegraphics[height=10cm]{g02.PNG}};
+
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {-0.2,-2.7};
+        \node at (-5,-1) (\itemNumber) [text_box] {泵1加药阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        %\draw (\centertPoint) circle (0.4)[red];
+        \def \itemNumber {2};
+        \def \centertPoint {0.2,-2.7};
+        \node at (5,-1) (\itemNumber) [text_box] {泵2加药阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        %\draw (\centertPoint) circle (0.4)[red];
+
+        % 辅助线
+        \def \xLimit {8};
+        \def \yLimit {8};
+        %\input{auxiliary_line}
+
+    \end{tikzpicture}
+\caption{加药阀位置}\label{fig:g02-dosing}
+\end{figure}

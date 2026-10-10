@@ -1,0 +1,28 @@
+
+\begin{figure}[h]
+\centering
+
+    \begin{tikzpicture}
+        %图片
+        \node at (0,0) {\includegraphics[height=10cm]{f1.PNG}};
+
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {0,2.5};
+        \node at (-5,3) (\itemNumber) [text_box] {检修排液阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.3)[red];
+        \def \itemNumber {2};
+        \def \centertPoint {0.3,-1.3};
+        \node at (-6,-3) (\itemNumber) [text_box] {检修排液阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.3)[red];
+
+        % 辅助线
+        %\def \xLimit {8};
+        %\def \yLimit {8};
+        %\input{auxiliary_line}
+
+    \end{tikzpicture}
+\caption{检修排液阀位置}\label{fig:p2}
+\end{figure}
