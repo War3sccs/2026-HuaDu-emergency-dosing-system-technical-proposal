@@ -40,11 +40,18 @@
 %\part{系统组成}
 %ctex的\chapter{sdsg}是不能用的
 
-\section{项目技术要求及实施目标}
-    \subsection{项目技术要求}
+\section{技术性能指标及质量标准}
+    \subsection{技术性能指标}
         \input{technical-proposal-brief-introduction}
-    \subsection{实施目标}
-        \input{technical-proposal-target}
+    \subsection{质量标准}
+        \begin{itemize}
+            \item 设备制造与验收合格率100\%。
+            \item 材质复检合格率100\%。
+            \item 连续72小时试运行零故障。
+        \end{itemize}
+
+\section{项目实施目标}
+    \input{technical-proposal-target}
 
 \section{生产制造方案}
     \subsection{生产准备与原材料管控}
@@ -64,8 +71,10 @@
         \subsubsection{干粉上料小车}
         干粉上料小车 由 真空上料系统、干粉料仓、管路系统组成，各系统特点如下：
         \begin{itemize}
-            \item 真空上料系统：\\
-                配置自带过滤器及反吹清灰功能的真空上料系统，适配吸吨包、小包干粉、罐装固体粉料。
+            \item 干粉上料系统：\\
+                具备1吨/小时的 干粉上料能力。
+                配置自带过滤器及反吹清灰功能的变频定量上料系统（带真空上料功能），
+                适配吸吨包、小包干粉、罐装固体粉料。
             \item 干粉料仓：\\
                 制作304不锈钢200L储料仓。
                 内部集成“机械破拱+流化气嘴”双防架桥系统。
@@ -88,6 +97,8 @@
                 低转速熟化、高速预湿，彻底解决PAM结“鱼眼”问题。
                 搅拌轴及叶轮进行动平衡测试，确保运行平稳。
                 搅拌机及叶轮成套不锈钢304材质。
+                结构采用独特的文丘里、拉什顿曲面叶轮，实现快速、无死角的高效均匀溶解、混合。
+                \input{picture-stirrer.tex}
             \item 流体控制：\\
                 配置自动补水系统（液位开关+流量计双控），
                 实现按浓度自动配水或纯手动补水。
@@ -133,8 +144,6 @@
     \subsection{质量检验体系}
     实施“三检制”（自检、互检、专检），建立从原材料到成品的全生命周期质量追溯档案。
 
-    \newpage
-
     \subsection{关键工序质控点（重点控制项目）}
     \vspace{0.5cm}
 
@@ -172,11 +181,11 @@
                 进行闭环校准，验证数字泵在变频+冲程双重调节下的精确度，确保出厂前流量误差$\le \pm1\%$。
         \end{itemize}
 
-\newpage
+%\newpage
 \section{项目进度计划}
     为满足“45天内到货并安装调试完成”的要求，我司采用并行工程管理，制定如下详细节点计划：
 
-    \vspace{0.5cm}
+    %\vspace{0.5cm}
 
     \begin{table}[htbp]
         \centering
